@@ -61,6 +61,12 @@ class _LoginPageState extends State<LoginPage> {
       SnackBar(content: Text(text)),
     );
   }
+@override
+  void dispose() {
+  email.dispose();
+  password.dispose();
+  super.dispose();
+}
 
   @override
   Widget build(BuildContext context) {
